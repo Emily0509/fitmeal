@@ -1,23 +1,23 @@
-import logo from './logo.svg';
+import React from 'react';
 import './App.css';
+import MealPlanner from './MealPlanner';
+import DataInput from './Components/DataInput';
+import DropdownMenu from './Components/FitnessGoal';
+import CustomizationOption from './Components/Customization';
+import Calendar from './Components/Calendar';
+import GridCell from './Components/GridCell';
+
+
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <MealPlanner />
+      <DataInput />
+      <DropdownMenu />
+      <CustomizationOption />
+      <Calendar />
+      <GridCell />
     </div>
   );
 }
