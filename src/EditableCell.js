@@ -1,9 +1,13 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { TableCell, TextField } from '@mui/material';
 
 const EditableCell = ({ value: initialValue, row: rowIndex, column: columnKey, onUpdate }) => {
     const [editing, setEditing] = useState(false);
     const [value, setValue] = useState(initialValue);
+
+    useEffect(() => {
+        setValue(initialValue);
+    }, [initialValue]);
 
     const handleDoubleClick = () => {
         setEditing(true);
